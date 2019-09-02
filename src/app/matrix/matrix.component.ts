@@ -17,9 +17,13 @@ export class MatrixComponent implements OnInit {
   ngOnInit() {
   }
 
+  reset() {
+    this.matrix = Array<string>();
+  }
+
   getMatrix() {
     const payload = {
-      commands: [
+      commandName: [
         '2',
         '4 5',
         'UPDATE 2 2 2 4',
@@ -45,9 +49,5 @@ export class MatrixComponent implements OnInit {
           console.log(err);
         }
       );
-
-      
   }
-
-
 }
