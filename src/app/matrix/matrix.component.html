@@ -1,0 +1,13 @@
+<mat-card>
+    <h1 mat-line>
+        <mat-card-title>Commands results</mat-card-title>
+    </h1>
+    <mat-card-content>
+        <mat-list>
+            <mat-list-item *ngFor="let car of matrix">
+                <h3 mat-line>{{car}}</h3>
+            </mat-list-item>
+        </mat-list>
+    </mat-card-content>
+</mat-card>
+<button mat-stroked-button (click)="getMatrix()">Execute commands</button>
